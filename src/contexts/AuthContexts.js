@@ -21,6 +21,7 @@ useEffect(()=>{
         setCurrentUser(user);
         setLoading(false);
     })
+    
     return unsubscribe;
 }, [])
 
