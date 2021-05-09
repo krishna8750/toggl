@@ -8,8 +8,11 @@
     "@testing-library/react": "^11.2.6",
     "@testing-library/user-event": "^12.8.3",
     "bootstrap": "^5.0.0",
+<<<<<<< HEAD
     "bootstrap-icons": "^1.4.1",
     "dotenv": "^9.0.0",
+=======
+>>>>>>> 3aabb544077736d030ea868eb55c957b893fadd0
     "firebase": "^8.5.0",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
