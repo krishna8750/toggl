@@ -21,7 +21,7 @@ function ResetPassword() {
                                     className="input-group-text"
                                     id="validationTooltipUsernamePrepend"
                                     >
-                                    <i class="bi bi-person"></i>
+                                    <i className="bi bi-person"></i>
                                     </span>
                                 </div>
                                 <Form.Control type="email" placeholder="Username" ref={emailRef} required />
@@ -37,7 +37,7 @@ function ResetPassword() {
                                     className="input-group-text"
                                     id="validationTooltipUsernamePrepend"
                                     >
-                                    <i class="bi bi-lock"></i>
+                                    <i className="bi bi-lock"></i>
                                     </span>
                                 </div>
                                 <Form.Control type="password" placeholder="Password" ref={passwordRef} required />
