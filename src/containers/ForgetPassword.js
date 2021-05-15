@@ -7,8 +7,8 @@ import { useAuth, currentUser } from "../contexts/AuthContexts"
 function Forgetpassword() {
     const emailRef = useRef();
     const { resetPassword } = useAuth();
-    const [error, setError ] = useState('');
-    const [message, setMessage ] = useState('');
+    const [ error, setError ] = useState('');
+    const [ message, setMessage ] = useState('');
     const [ loading, setLoading ] = useState(false);
 
     async function handleSubmit(e) {
