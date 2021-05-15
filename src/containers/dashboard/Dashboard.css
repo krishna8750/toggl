@@ -1,0 +1,77 @@
+@import "../../index.css";
+
+.dashboard {
+    display: flex;
+    flex-wrap: nowrap;
+    height: 100vh;
+    width: 100%;
+}
+
+.left-col {
+    width: 200px;
+    display: flex;
+    background-color: var(--blue);
+}
+.sidebar {
+    display: flex;
+    width: 100%;
+    padding: 15px 15px;
+}
+.sidebar .sidebar-inner {
+    display: flex;
+    flex-direction: column;
+}
+.sidebar .logo > li {
+    color: var(--white);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.right-col {
+    display: flex;
+    width: calc(100% - 200px);
+}
+.common-menu .sub-heading {
+    color: var(--lightblue);
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.manage {
+    flex-grow: 1;
+}
+
+.list-menu > li > a {
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+.list-menu > li > a > .svg-inline--fa {
+    margin-right: 10px;
+    width: 20px;
+}
+.user-menu {
+    margin-top: auto;
+}
+.user-menu > .list-menu > li > a {
+    justify-content: space-between;
+}
+.user-menu > .list-menu > li > a > span {
+    width: calc(100% - 35px);
+    max-width: calc(100% - 35px);
+    overflow: hidden;
+}
+.user-menu > .list-menu > li > a > span > span {
+    font-size: 14px;
+    display: block;
+}
+.user-menu > .list-menu > li > a > span > span:last-child {
+    font-size: 12px;
+}
+.user-menu > .list-menu > li > a > .svg-inline--fa {
+    margin-right: 0;
+    max-width: 30px;
+    width: 100%;
+    font-size: 25px;
+}

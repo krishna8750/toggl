@@ -4,7 +4,7 @@ import Signup from "./containers/Signup";
 import ForgetPassword from "./containers/ForgetPassword";
 import ResetPassword from "./containers/ResetPassword";
 import { AuthProvider } from "./contexts/AuthContexts";
-import Dashboard from "./containers/Dashboard";
+import Dashboard from "./containers/dashboard/Dashboard";
 import UpdateProfile from "./containers/UpdateProfile";
 import PrivateRoute from './containers/PrivateRoute'
 
