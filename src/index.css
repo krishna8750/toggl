@@ -7,7 +7,7 @@
     --black: #000000;
     --white: #ffffff;
     --pink: #e57cd8;
-    --lightpink: #fbe5f7;
+    --lightpink: #fef9f8;
 }
 
 * {
@@ -29,4 +29,8 @@ a:hover,
 a:active,
 a:focus {
     text-decoration: none;
+}
+
+p {
+    margin: 0;
 }

@@ -60,7 +60,7 @@ export default function Dashboard() {
                 </div>
                 <div className="right-col right-dashboard">
                     <div className="dashboard-content">
-                        <div className="add-task">
+                        <div className="cp add-task">
                             <form action="">
                                 <input type="text" placeholder="What are you working on?" />
                                 <div className="action-option">
@@ -77,24 +77,30 @@ export default function Dashboard() {
                             </form>
                         </div>
                         <div className="task-list">
-                            <div className="this-week">
-                                <p>This week 0:00:00</p>
+                            <div className="cp this-week">
+                                <p>This week: 0:00:00</p>
                             </div>
-                        </div>
-                    </div>
-                    <div className="container-fluid mt-5">
-                        <div className="row">
-                            <div className="col-12">
-                                <Card>
-                                    <Card.Body>
-                                        <h1>Dash Board</h1>
-                                        { error && <Alert variant="danger">{error}</Alert> }
-                                        <h2><strong>Email: </strong> {currentUser.email}</h2>
-                                        <Link to="/updateprofile" className="btn btn-primary mt-2">Update Profile</Link>
-                                    </Card.Body>
-                                </Card>
-                                <div className="w-100 mt-2">
-                                    <Button onClick={handleLogout} className="btn btn-danger">Log Out</Button>
+                            <div className="cp projects-progress-bar">
+                                <div className="project-progress-bar">
+                                    <p>ASHOKA</p>
+                                    <span className="cprogress-bar"></span>
+                                </div>
+                            </div>
+                            <div className="container-fluid mt-5">
+                                <div className="row">
+                                    <div className="col-12">
+                                        <Card>
+                                            <Card.Body>
+                                                <h1>Dash Board</h1>
+                                                { error && <Alert variant="danger">{error}</Alert> }
+                                                <h2><strong>Email: </strong> {currentUser.email}</h2>
+                                                <Link to="/updateprofile" className="btn btn-primary mt-2">Update Profile</Link>
+                                            </Card.Body>
+                                        </Card>
+                                        <div className="w-100 mt-2">
+                                            <Button onClick={handleLogout} className="btn btn-danger">Log Out</Button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>

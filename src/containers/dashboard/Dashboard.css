@@ -1,4 +1,10 @@
 @import "../../index.css";
+/* common css */
+.cp {
+    padding: 10px 20px;
+}
+/* common css */
+
 
 .dashboard {
     display: flex;
@@ -155,10 +161,30 @@
 }
 .task-list {
     background-color: var(--lightpink);
+    padding: 10px 0px;
 }
 .this-week {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
+}
+
+.this-week p {
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.project-progress-bar p {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+}
+.project-progress-bar span {
+    display: inline-block;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--green);
+    width: 100%;
 }
