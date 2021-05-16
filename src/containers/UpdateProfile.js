@@ -120,4 +120,8 @@ function UpdateProfile() {
     );
 }
 
+<<<<<<< HEAD
 export default UpdateProfile;
+=======
+export default UpdateProfile;
+>>>>>>> 01ca827aee3ccefcdc4517a422aeb2c06ddb8382
