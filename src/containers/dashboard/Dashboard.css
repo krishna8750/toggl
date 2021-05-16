@@ -1,4 +1,13 @@
 @import "../../index.css";
+/* common css */
+.cp {
+    padding: 10px 20px;
+}
+.bg-white {
+    background-color: var(--white);
+}
+/* common css */
+
 
 .dashboard {
     display: flex;
@@ -155,10 +164,120 @@
 }
 .task-list {
     background-color: var(--lightpink);
+    padding: 10px 0px;
 }
 .this-week {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.this-week p {
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.project-progress-bar p {
+    color: var(--green);
+    font-size: 12px;
+    font-weight: 700;
+}
+.project-progress-bar span {
+    display: inline-block;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--green);
+    width: 100%;
+}
+
+.day-actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     padding: 10px 20px;
+}
+
+.day-actions .cust-date-p > p {
+    color: var(--black);
+    font-weight: 700;
+}
+
+.day-actions .cust-time-p {
+    max-width: 140px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cust-time-p .cust-time p {
+    font-weight: 700;
+}
+.bulk-action {
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+}
+.bulk-action .svg-inline--fa {
+    color: var(--gray);
+}
+.bulk-action:hover {
+    background-color: var(--lightpink);
+}
+.bulk-action:hover .svg-inline--fa {
+    color: var(--pink);
+}
+
+.day-task {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.task-description {
+    flex-grow: 1;
+    max-width: 400px;
+    overflow: hidden;
+}
+.task-description p {
+    color: var(--black);
+    max-width: 400px;
+    white-space: nowrap;
+    overflow: hidden;
+    margin-right: 15px;
+}
+.task-project {
+    flex-grow: 1;
+}
+.task-project p {
+    color: var(--green);
+    font-weight: 500;
+}
+
+.task-time-p {
+    max-width: 140px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.task-hover-c {
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+}
+.task-hover-c .svg-inline--fa {
+    color: var(--gray);
+}
+.task-action-btn {
+    padding: 5px 5px 5px 10px;
+    border-radius: 5px;
+}
+.task-action-btn .svg-inline--fa {
+    color: var(--gray);
+}
+.task-action-btn:hover {
+    background-color: var(--lightpink);
+}
+.task-action-btn:hover .svg-inline--fa {
+    color: var(--pink);
 }

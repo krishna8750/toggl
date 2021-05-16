@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import './Dashboard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBell, faFileAlt, faFileContract, faFolder, faUserTie, faUsers, faUserCog, faHandsHelping, faUserCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
+import { faBell, faFileAlt, faFileContract, faFolder, faUserTie, faUsers, faUserCog, faHandsHelping, faUserCircle, faPlayCircle, faEdit, faPlay, faEllipsisV } from '@fortawesome/free-solid-svg-icons'
 
 export default function Dashboard() {
     const [error, setError] = useState("")
@@ -60,7 +60,7 @@ export default function Dashboard() {
                 </div>
                 <div className="right-col right-dashboard">
                     <div className="dashboard-content">
-                        <div className="add-task">
+                        <div className="cp add-task">
                             <form action="">
                                 <input type="text" placeholder="What are you working on?" />
                                 <div className="action-option">
@@ -77,14 +77,50 @@ export default function Dashboard() {
                             </form>
                         </div>
                         <div className="task-list">
-                            <div className="this-week">
-                                <p>This week 0:00:00</p>
+                            <div className="cp this-week">
+                                <p>This week: 0:00:00</p>
                             </div>
-                        </div>
-                    </div>
-                    <div className="container-fluid mt-5">
-                        <div className="row">
-                            <div className="col-12">
+                            <div className="cp projects-progress-bar">
+                                <div className="project-progress-bar">
+                                    <p>ASHOKA</p>
+                                    <span className="cprogress-bar"></span>
+                                </div>
+                            </div>
+                            <div className="task-lists">
+                                <div className="day-actions bg-white">
+                                    <div className="cust-date-p">
+                                        <p>Tue, 11 May</p>
+                                    </div>
+                                    <div className="cust-time-p total-time">
+                                        <div className="cust-time">
+                                            <p>0:00:00</p>
+                                        </div>
+                                        <div className="bulk-action">
+                                            <FontAwesomeIcon icon={faEdit} />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="day-task day-task bg-white">
+                                    <div className="task-description">
+                                        <p>Ashoka Changes (Our head of Department section make carousel all website)</p>
+                                    </div>
+                                    <div className="task-project">
+                                        <p>Ashoka</p>
+                                    </div>
+                                    <div className="task-time-p total-time">
+                                        <div className="cust-time">
+                                            <p>0:00:00</p>
+                                        </div>
+                                        <div className="task-hover-c timer-btn">
+                                            <FontAwesomeIcon icon={faPlay} />
+                                        </div>
+                                        <div className="task-hover-c task-action-btn">
+                                            <FontAwesomeIcon icon={faEllipsisV} />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="cp">
                                 <Card>
                                     <Card.Body>
                                         <h1>Dash Board</h1>
