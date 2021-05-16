@@ -6,6 +6,7 @@ import { useAuth, currentUser } from "../contexts/AuthContexts"
 
 function Signup() {
     const emailRef = useRef();
+    const uNameRef = useRef();
     const passwordRef = useRef();
     const passwordConfirmRef = useRef();
     const { signup } = useAuth();
@@ -23,7 +24,7 @@ function Signup() {
         try{
             setError('');
             setLoading(true);
-            await signup(emailRef.current.value, passwordRef.current.value);
+            await signup(emailRef.current.value, passwordRef.current.value, uNameRef.current.value);
             history.push("/")
         } catch {
             setError("Failed to create an account");
@@ -40,7 +41,8 @@ function Signup() {
                     { error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <div className="form-row">
-                            <div className="col-md-12 mb-3">
+
+                        <div className="col-md-12 mb-3">
                                 <Form.Group className="input-group">
                                 <div className="input-group-prepend">
                                     <span
@@ -50,7 +52,24 @@ function Signup() {
                                     <i className="bi bi-person"></i>
                                     </span>
                                 </div>
-                                <Form.Control type="email" placeholder="Username" ref={emailRef} required />
+                                <Form.Control type="text" placeholder="User Name" ref={uNameRef} required />
+                                <div className="invalid-tooltip">
+                                    Please choose a unique user name.
+                                </div>
+                                </Form.Group>
+                            </div>
+
+                            <div className="col-md-12 mb-3">
+                                <Form.Group className="input-group">
+                                <div className="input-group-prepend">
+                                    <span
+                                    className="input-group-text"
+                                    id="validationTooltipUsernamePrepend"
+                                    >
+                                    <i className="bi bi-envelope-fill"></i>
+                                    </span>
+                                </div>
+                                <Form.Control type="email" placeholder="Email" ref={emailRef} required />
                                 <div className="invalid-tooltip">
                                     Please choose a unique and valid username.
                                 </div>
