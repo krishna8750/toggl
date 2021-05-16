@@ -101,7 +101,7 @@ function Signup() {
                 <div className="signup">
                     <h2>Login</h2>
                     <p>
-                        I already a account i want to login!
+                        I already have a account i want to login!
                     </p>
                     <Link to="/login" className="btn btn-primary">Login Now!</Link>
                 </div>

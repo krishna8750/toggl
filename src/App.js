@@ -1,10 +1,10 @@
-import Login from "./containers/Login"
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import Login from "./containers/Login";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Signup from "./containers/Signup";
 import ForgetPassword from "./containers/ForgetPassword";
 import ResetPassword from "./containers/ResetPassword";
 import { AuthProvider } from "./contexts/AuthContexts";
-import Dashboard from "./containers/dashboard/Dashboard";
+import Dashboard from "./containers/dashboard/Dashboard"
 import UpdateProfile from "./containers/UpdateProfile";
 import PrivateRoute from './containers/PrivateRoute'
 

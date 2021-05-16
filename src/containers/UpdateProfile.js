@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState } from "react";
 import "./index.css"
 import { Form, Button, Alert } from "react-bootstrap"
 import { Link, useHistory } from "react-router-dom"
