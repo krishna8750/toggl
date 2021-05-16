@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import './Dashboard.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faBell, faFileAlt, faFileContract, faFolder, faUserTie, faUsers, faUserCog, faHandsHelping, faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import { faBell, faFileAlt, faFileContract, faFolder, faUserTie, faUsers, faUserCog, faHandsHelping, faUserCircle, faPlayCircle } from '@fortawesome/free-solid-svg-icons'
 
 export default function Dashboard() {
     const [error, setError] = useState("")
@@ -59,7 +59,30 @@ export default function Dashboard() {
                     </div>
                 </div>
                 <div className="right-col right-dashboard">
-                    <div className="container-fluid">
+                    <div className="dashboard-content">
+                        <div className="add-task">
+                            <form action="">
+                                <input type="text" placeholder="What are you working on?" />
+                                <div className="action-option">
+                                    <div className="action">
+                                        <FontAwesomeIcon icon={faFolder} />
+                                    </div>
+                                    <div className="action timer">
+                                        <input type="text" placeholder="0:00:00" />
+                                    </div>
+                                    <div className="action play">
+                                        <button><FontAwesomeIcon icon={faPlayCircle} /></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div className="task-list">
+                            <div className="this-week">
+                                <p>This week 0:00:00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="container-fluid mt-5">
                         <div className="row">
                             <div className="col-12">
                                 <Card>
