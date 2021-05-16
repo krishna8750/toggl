@@ -76,7 +76,7 @@ export default function Dashboard() {
                                 </div>
                             </form>
                         </div>
-                        <div className="task-list">
+                        <div className="task-list-all">
                             <div className="cp this-week">
                                 <p>This week: 0:00:00</p>
                             </div>
@@ -87,50 +87,183 @@ export default function Dashboard() {
                                 </div>
                             </div>
                             <div className="task-lists">
-                                <div className="day-actions bg-white">
-                                    <div className="cust-date-p">
-                                        <p>Tue, 11 May</p>
-                                    </div>
-                                    <div className="cust-time-p total-time">
-                                        <div className="cust-time">
-                                            <p>0:00:00</p>
+                                <div className="task-list">
+                                    <div className="day-actions bg-cust-white">
+                                        <div className="cust-date-p">
+                                            <p>Tue, 11 May</p>
                                         </div>
-                                        <div className="bulk-action">
-                                            <FontAwesomeIcon icon={faEdit} />
+                                        <div className="cust-time-p total-time">
+                                            <div className="cust-time">
+                                                <p>0:00:00</p>
+                                            </div>
+                                            <div className="task-hover-c bulk-action">
+                                                <FontAwesomeIcon icon={faEdit} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="day-task bg-cust-white">
+                                        <div className="task-description">
+                                            <p>Ashoka Changes (Our head of Department section make carousel all website)</p>
+                                        </div>
+                                        <div className="task-project">
+                                            <p>Ashoka</p>
+                                        </div>
+                                        <div className="task-time-p total-time">
+                                            <div className="cust-time">
+                                                <p>0:00:00</p>
+                                            </div>
+                                            <div className="task-hover-g d-n timer-btn">
+                                                <FontAwesomeIcon icon={faPlay} />
+                                            </div>
+                                            <div className="task-hover-g d-n task-action-btn">
+                                                <FontAwesomeIcon icon={faEllipsisV} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="day-task bg-cust-white">
+                                        <div className="task-description">
+                                            <p>Ashoka Changes (Our head of Department section make carousel all website)</p>
+                                        </div>
+                                        <div className="task-project">
+                                            <p>Ashoka</p>
+                                        </div>
+                                        <div className="task-time-p total-time">
+                                            <div className="cust-time">
+                                                <p>0:00:00</p>
+                                            </div>
+                                            <div className="task-hover-g d-n timer-btn">
+                                                <FontAwesomeIcon icon={faPlay} />
+                                            </div>
+                                            <div className="task-hover-g d-n task-action-btn">
+                                                <FontAwesomeIcon icon={faEllipsisV} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="day-task bg-cust-white">
+                                        <div className="task-description">
+                                            <p>Ashoka Changes (Our head of Department section make carousel all website)</p>
+                                        </div>
+                                        <div className="task-project">
+                                            <p>Ashoka</p>
+                                        </div>
+                                        <div className="task-time-p total-time">
+                                            <div className="cust-time">
+                                                <p>0:00:00</p>
+                                            </div>
+                                            <div className="task-hover-g d-n timer-btn">
+                                                <FontAwesomeIcon icon={faPlay} />
+                                            </div>
+                                            <div className="task-hover-g d-n task-action-btn">
+                                                <FontAwesomeIcon icon={faEllipsisV} />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="day-task day-task bg-white">
-                                    <div className="task-description">
-                                        <p>Ashoka Changes (Our head of Department section make carousel all website)</p>
-                                    </div>
-                                    <div className="task-project">
-                                        <p>Ashoka</p>
-                                    </div>
-                                    <div className="task-time-p total-time">
-                                        <div className="cust-time">
-                                            <p>0:00:00</p>
+                                <div className="task-list">
+                                    <div className="day-actions bg-cust-white">
+                                        <div className="cust-date-p">
+                                            <p>Tue, 11 May</p>
                                         </div>
-                                        <div className="task-hover-c timer-btn">
-                                            <FontAwesomeIcon icon={faPlay} />
+                                        <div className="cust-time-p total-time">
+                                            <div className="cust-time">
+                                                <p>0:00:00</p>
+                                            </div>
+                                            <div className="task-hover-c bulk-action">
+                                                <FontAwesomeIcon icon={faEdit} />
+                                            </div>
                                         </div>
-                                        <div className="task-hover-c task-action-btn">
-                                            <FontAwesomeIcon icon={faEllipsisV} />
+                                    </div>
+                                    <div className="day-task bg-cust-white">
+                                        <div className="task-description">
+                                            <p>Ashoka Changes (Our head of Department section make carousel all website)</p>
+                                        </div>
+                                        <div className="task-project">
+                                            <p>Ashoka</p>
+                                        </div>
+                                        <div className="task-time-p total-time">
+                                            <div className="cust-time">
+                                                <p>0:00:00</p>
+                                            </div>
+                                            <div className="task-hover-g d-n timer-btn">
+                                                <FontAwesomeIcon icon={faPlay} />
+                                            </div>
+                                            <div className="task-hover-g d-n task-action-btn">
+                                                <FontAwesomeIcon icon={faEllipsisV} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="day-task bg-cust-white">
+                                        <div className="task-description">
+                                            <p>Ashoka Changes (Our head of Department section make carousel all website)</p>
+                                        </div>
+                                        <div className="task-project">
+                                            <p>Ashoka</p>
+                                        </div>
+                                        <div className="task-time-p total-time">
+                                            <div className="cust-time">
+                                                <p>0:00:00</p>
+                                            </div>
+                                            <div className="task-hover-g d-n timer-btn">
+                                                <FontAwesomeIcon icon={faPlay} />
+                                            </div>
+                                            <div className="task-hover-g d-n task-action-btn">
+                                                <FontAwesomeIcon icon={faEllipsisV} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="day-task bg-cust-white">
+                                        <div className="task-description">
+                                            <p>Ashoka Changes (Our head of Department section make carousel all website)</p>
+                                        </div>
+                                        <div className="task-project">
+                                            <p>Ashoka</p>
+                                        </div>
+                                        <div className="task-time-p total-time">
+                                            <div className="cust-time">
+                                                <p>0:00:00</p>
+                                            </div>
+                                            <div className="task-hover-g d-n timer-btn">
+                                                <FontAwesomeIcon icon={faPlay} />
+                                            </div>
+                                            <div className="task-hover-g d-n task-action-btn">
+                                                <FontAwesomeIcon icon={faEllipsisV} />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="day-task bg-cust-white">
+                                        <div className="task-description">
+                                            <p>Ashoka Changes (Our head of Department section make carousel all website)</p>
+                                        </div>
+                                        <div className="task-project">
+                                            <p>Ashoka</p>
+                                        </div>
+                                        <div className="task-time-p total-time">
+                                            <div className="cust-time">
+                                                <p>0:00:00</p>
+                                            </div>
+                                            <div className="task-hover-g d-n timer-btn">
+                                                <FontAwesomeIcon icon={faPlay} />
+                                            </div>
+                                            <div className="task-hover-g d-n task-action-btn">
+                                                <FontAwesomeIcon icon={faEllipsisV} />
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="cp">
-                                <Card>
-                                    <Card.Body>
-                                        <h1>Dash Board</h1>
-                                        { error && <Alert variant="danger">{error}</Alert> }
-                                        <h2><strong>Email: </strong> {currentUser.email}</h2>
-                                        <Link to="/updateprofile" className="btn btn-primary mt-2">Update Profile</Link>
-                                    </Card.Body>
-                                </Card>
-                                <div className="w-100 mt-2">
-                                    <Button onClick={handleLogout} className="btn btn-danger">Log Out</Button>
+                                <div className="task-list">
+                                    <Card>
+                                        <Card.Body>
+                                            <h1>Dash Board</h1>
+                                            {error && <Alert variant="danger">{error}</Alert>}
+                                            <h2><strong>Email: </strong> {currentUser.email}</h2>
+                                            <Link to="/updateprofile" className="btn btn-primary mt-2">Update Profile</Link>
+                                        </Card.Body>
+                                    </Card>
+                                    <div className="col-12">
+                                        <div className="w-100 mt-2">
+                                            <Button onClick={handleLogout} className="btn btn-danger">Log Out</Button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
