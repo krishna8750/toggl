@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react"
+import React, { useRef, useState } from "react";
 import "./index.css"
 import { Form, Button, Alert } from "react-bootstrap"
 import { Link, useHistory } from "react-router-dom"
@@ -120,8 +120,4 @@ function UpdateProfile() {
     );
 }
 
-<<<<<<< HEAD
 export default UpdateProfile;
-=======
-export default UpdateProfile;
->>>>>>> 01ca827aee3ccefcdc4517a422aeb2c06ddb8382
