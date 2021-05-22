@@ -11,6 +11,7 @@ import { db } from "../../firebase"
 export default function Dashboard() {
     const [error, setError] = useState("")
     const [userName, setUserName] = useState("")
+    const [timer, setTimer] = useState(false);
     const { currentUser, logout } = useAuth()
     const history = useHistory()
 
@@ -35,6 +36,23 @@ export default function Dashboard() {
             }
         });
     });
+
+    function toggleButton(e) {
+        console.log(e+ "toggle")
+        e.preventDefault();
+        if(timer) {
+            setTimer(!timer)
+
+        }
+        else {
+            setTimer(!timer)
+        }
+    }
+
+    function addTask(e) {
+        e.preventDefault()
+        console.log(e.target.value + "addtask");
+    }
 
     return (
         <>
@@ -74,17 +92,24 @@ export default function Dashboard() {
                 <div className="right-col right-dashboard">
                     <div className="dashboard-content">
                         <div className="cp add-task">
-                            <form action="">
+                            <form onSubmit={addTask}>
                                 <input type="text" placeholder="What are you working on?" />
                                 <div className="action-option">
                                     <div className="action">
-                                        <FontAwesomeIcon icon={faFolder} />
+                                        <select>
+                                            <option>Ashoka</option>
+                                            <option>krishna</option>
+                                            <option>satish</option>
+                                        </select>
+                                        <label><FontAwesomeIcon icon={faFolder} /></label>
                                     </div>
                                     <div className="action timer">
                                         <input type="text" placeholder="0:00:00" />
                                     </div>
                                     <div className="action play">
-                                        <button><FontAwesomeIcon icon={faPlayCircle} /></button>
+                                    {timer ?
+                                        (<button type="submit"><FontAwesomeIcon icon={faEdit} /></button>)
+                                        :(<button onClick={toggleButton}><FontAwesomeIcon icon={faPlayCircle} /></button>)}
                                     </div>
                                 </div>
                             </form>
