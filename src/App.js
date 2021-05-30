@@ -1,12 +1,12 @@
-import Login from "./containers/Login";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Signup from "./containers/Signup";
-import ForgetPassword from "./containers/ForgetPassword";
-import ResetPassword from "./containers/ResetPassword";
+import Login from "./components/authComponent/Login";
+import Signup from "./components/authComponent/Signup";
+import ResetPassword from "./components/authComponent/ResetPassword";
+import UpdateProfile from "./components/authComponent/UpdateProfile";
+import ForgetPassword from "./components/authComponent/ForgetPassword";
 import { AuthProvider } from "./contexts/AuthContexts";
-import Dashboard from "./containers/dashboard/Dashboard"
-import UpdateProfile from "./containers/UpdateProfile";
-import PrivateRoute from './containers/PrivateRoute'
+import Dashboard from "./components/dashboard/Dashboard"
+import PrivateRoute from './hoc/PrivateRoute'
 
 const dotenv = require('dotenv').config();
 

@@ -113,13 +113,14 @@
 .add-task > form > input {
     flex-grow: 1;
     border: 0;
-    padding: 10px 0;
+    padding: 10px 10px;
     font-size: 18px;
-    font-weight: 700;
+    font-weight: 500;
+    margin-right: 10px;
+    border-radius: 5px;
 }
-.add-task > form > input::placeholder {
-    font-weight: 700;
-    color: var(--gray);
+.add-task > form > input:focus {
+    background-color: var(--lightpink);
 }
 
 .add-task > form > .action-option {
@@ -129,15 +130,33 @@
 .add-task > form > .action-option > .action {
     flex-grow: 1;
     font-size: 18px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.add-task > form > .action-option > .action > select {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding-left: 30px;
+    width: 100%;
+}
+.add-task > form > .action-option > .action > select:focus {
+    background-color: var(--lightpink);
+}
+.add-task > form > .action-option > .action > label {
+    position: absolute;
+    left: 5px;
+    top: 0;
+    z-index: 1;
 }
 .add-task > form > .action-option > .action > .svg-inline--fa {
     color: var(--gray);
 }
 .add-task > form > .action-option > .timer {
     max-width: 100px;
-    margin: 0 15px;
+    margin: 0 10px;
 } 
-.add-task > form > .action-option > .timer > input {
+.add-task > form > .action-option > .timer > p {
     width: 100%;
     text-align: center;
     border: 0;
@@ -146,26 +165,27 @@
     border-radius: 10px;
     font-weight: 700;
     color: var(--black);
-    font-size: 18px;
+    font-size: 15px;
 }
-.add-task > form > .action-option > .timer > input:hover {
+.add-task > form > .action-option > .timer > p:hover {
     background-color: var(--lightpink);
-}
-.add-task > form > .action-option > .timer > input::placeholder {
-    text-align: center;
-    font-weight: 700;
-    color: var(--black);
 }
 .add-task > form > .action-option > .play > button {
     border: 0;
-    background: transparent;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: transparent;
 }
 .add-task > form > .action-option > .play > button:focus {
     border: 0;
     outline: 0;
-    background: transparent;
+    background-color: var(--lightpink);
 }
-.add-task > form > .action-option > .play > button > .svg-inline--fa {
+.add-task > form > .action-option > .play > button.stop > .svg-inline--fa {
+    font-size: 35px;
+    color: var(--red);
+}
+.add-task > form > .action-option > .play > button.play > .svg-inline--fa {
     font-size: 35px;
     color: var(--pink);
 }
@@ -264,17 +284,13 @@
     padding: 10px 20px;
     border-bottom: 2px solid var(--lightgray);
 }
-.day-task .task-description {
-    flex-grow: 1;
-    max-width: 400px;
-    overflow: hidden;
-}
 .day-task .task-description p {
     color: var(--black);
     max-width: 400px;
     white-space: nowrap;
     overflow: hidden;
     margin-right: 15px;
+    font-size: 14px;
 }
 .day-task .task-project {
     flex-grow: 1;
@@ -282,6 +298,18 @@
 .day-task .task-project p {
     color: var(--green);
     font-weight: 500;
+    position: relative;
+    padding-left: 15px;
+}
+.day-task .task-project p:before {
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 25px;
+    background-color: var(--green);
+    left: 0;
+    top: 8px;
 }
 
 .day-task .task-time-p {

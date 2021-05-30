@@ -1,52 +1,38 @@
-import React, { useRef, useState } from "react";
+
+import React, { useRef, useState } from "react"
 import "./index.css"
 import { Form, Button, Alert } from "react-bootstrap"
 import { Link, useHistory } from "react-router-dom"
-import { useAuth, currentUser } from "../contexts/AuthContexts"
+import { useAuth, currentUser } from "../../contexts/AuthContexts"
 
-function UpdateProfile() {
+function Login() {
     const emailRef = useRef();
     const passwordRef = useRef();
-    const passwordConfirmRef = useRef();
-    const { currentUser, updateEmail, updatePassword } = useAuth();
+    const { login } = useAuth();
     const [error, setError ] = useState('');
     const [ loading, setLoading ] = useState(false);
     const history = useHistory();
 
-    function handleSubmit(e) {
+    async function handleSubmit(e) {
         e.preventDefault()
 
-        if(passwordRef.current.value !== passwordConfirmRef.current.value){
-            return setError("Password do not match");
-        }
-
-        const promises = []
-        setLoading(true)
-        setError('')
-
-        if (emailRef.current.value !== currentUser.email) {
-            promises.push(updateEmail(emailRef.current.value))
-        }
-        if (passwordRef.current.value) {
-            promises.push(updatePassword(passwordRef.current.value))
-        }
-
-        Promise.all(promises).then(() => {
+        try{
+            setError('');
+            setLoading(true);
+            await login(emailRef.current.value, passwordRef.current.value);
             history.push("/")
-        }).catch(() => {
-            setError("Failed to update account")            
-        }).finally(() => {
-            setLoading(false)            
-        })
-
+        } catch {
+            setError("Failed to Sign In");
+        }
+        setLoading(false);
     }
 
     return (
         <div className="login">
             <div className="login-inner">
                 <div className="login-box">
-                    <h1>Update Profile</h1>
-                    <p>Update your Profile</p>
+                    <h1>Log In</h1>
+                    <p>Log in to your account</p>
                     { error && <Alert variant="danger">{error}</Alert>}
                     <Form onSubmit={handleSubmit}>
                         <div className="form-row">
@@ -60,7 +46,7 @@ function UpdateProfile() {
                                     <i className="bi bi-person"></i>
                                     </span>
                                 </div>
-                                <Form.Control type="email" placeholder="Username" ref={emailRef} required defaultValue={currentUser.email} />
+                                <Form.Control type="email" placeholder="Username" ref={emailRef} required />
                                 <div className="invalid-tooltip">
                                     Please choose a unique and valid username.
                                 </div>
@@ -76,25 +62,7 @@ function UpdateProfile() {
                                     <i className="bi bi-lock"></i>
                                     </span>
                                 </div>
-                                <Form.Control type="password" placeholder="Leave black to keep the same" ref={passwordRef} />
-                                <div className="invalid-tooltip">
-                                    Please choose a unique and valid Password.
-                                </div>
-                                </Form.Group>
-                            </div>
-
-                            
-                            <div className="col-md-12 mb-3">
-                                <Form.Group className="input-group">
-                                <div className="input-group-prepend">
-                                    <span
-                                    className="input-group-text"
-                                    id="validationTooltipUsernamePrepend"
-                                    >
-                                    <i className="bi bi-lock"></i>
-                                    </span>
-                                </div>
-                                <Form.Control type="password" placeholder="Leave black to keep the same" ref={passwordConfirmRef} />
+                                <Form.Control type="password" placeholder="Password" ref={passwordRef} required />
                                 <div className="invalid-tooltip">
                                     Please choose a unique and valid Password.
                                 </div>
@@ -103,21 +71,22 @@ function UpdateProfile() {
                         </div>
                         <div className="d-flex align-items-center justify-content-between">
                             <button disabled={loading} className="btn btn-primary" type="submit">
-                                Update
+                                Log In
                             </button>
+                            <Link to="/forgetpassword" className="btn btn-secondary">Forgot Password?</Link>
                         </div>
                     </Form>
                 </div>
                 <div className="signup">
-                    <h2>DashBoard</h2>
+                    <h2>Sign Up</h2>
                     <p>
-                        Back to DashBoard? 
+                        Need an account?
                     </p>
-                    <Link to="/" className="btn btn-primary">DashBoard</Link>
+                    <Link to="/signup" className="btn btn-primary">Register Now!</Link>
                 </div>
             </div>
         </div>
     );
 }
 
-export default UpdateProfile;
+export default Login;
