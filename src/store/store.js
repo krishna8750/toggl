@@ -12,8 +12,8 @@ const store = createStore(rootReducer, globleInitState, applyMiddleware(thunk));
 
 // compose(
 //     applyMiddleware(thunk.withExtraArgument({getFirebase, getFirestore})),
-//     reactReduxFirebase(app), // redux binding for firebase
-//     reduxFirestore(db) // redux bindings for firestore
+//     reduxFirestore(db), // redux bindings for firestore
+//     reactReduxFirebase(app) // redux binding for firebase
 // )
 
 

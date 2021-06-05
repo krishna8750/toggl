@@ -12,7 +12,8 @@ export function AuthProvider({ children }) {
   const [loading, setLoading] = useState(true);
 
   async function signup(email, password, userName) {
-    return auth.createUserWithEmailAndPassword(email, password).then((cred) => {
+    return auth.createUserWithEmailAndPassword(email, password)
+    .then((cred) => {
       return db.collection("users").doc(cred.user.uid).set({
         uName: userName,
       });
@@ -37,9 +38,7 @@ export function AuthProvider({ children }) {
 
   function updatePassword(password) {
     return currentUser.updatePassword(password);
-  }
-
-
+  };
 
   useEffect(() => {
     const unsubscribe = auth.onAuthStateChanged((user) => {
